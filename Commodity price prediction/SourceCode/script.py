@@ -89,7 +89,7 @@ def getCity():
     #yearOptions.clear()
 
     record = pd.read_csv("data\\"+commodityClicked.get())
-    
+
 
     for city in record['mkt_name'].unique():
         comparisonOptions.append(city)
