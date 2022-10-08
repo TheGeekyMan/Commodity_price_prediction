@@ -17,10 +17,10 @@ title_bar = Frame(window, bg='blue', relief='raised', bd=2)
 
 window.geometry("1280x720")
 window.wm_title("Commodity Price Prediction")
-window.wm_iconbitmap("images\\science.ico")
+window.wm_iconbitmap("SourceCode\\images\\science.ico")
 
 #C = Canvas(window, bg="blue", height=1280, width=720)
-filename = PhotoImage(file = "images\\india_agri.png")
+filename = PhotoImage(file = "SourceCode\\images\\india_agri.png")
 background_label = Label(window, image=filename)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 #C.pack()
@@ -51,7 +51,7 @@ priceByOptions.configure(font=("Cambria", 11),bg="#ffffff")
 stockByOptions.configure(font=("Cambria", 11),bg="#ffffff")
 commodityOptions = []
 
-commodityOptions = os.listdir("data\\")
+commodityOptions = os.listdir("SourceCode\\data\\")
 # datatype of menu text
 commodityClicked = StringVar()
 # initial menu text
@@ -88,7 +88,7 @@ def getCity():
     comparisonOptions.clear()
     #yearOptions.clear()
 
-    record = pd.read_csv("data\\"+commodityClicked.get())
+    record = pd.read_csv("SourceCode\\data\\"+commodityClicked.get())
 
 
     for city in record['mkt_name'].unique():
@@ -158,7 +158,7 @@ def startAnalysis():
     print("Comparison = ",comparison," Commodity = ",commodity)
     # year = yearClicked.get()
 
-    file = 'temp\\out.csv'
+    file = 'SourceCode\\temp\\out.csv'
     if(os.path.exists(file) and os.path.isfile(file)):
         os.remove(file)
         #print("file deleted")
@@ -167,8 +167,8 @@ def startAnalysis():
 
     
 
-    df = pd.read_csv("data\\"+commodityClicked.get())
-    df[(df['mkt_name'] == comparison)].to_csv("temp\\out.csv", index=False)
+    df = pd.read_csv("SourceCode\\data\\"+commodityClicked.get())
+    df[(df['mkt_name'] == comparison)].to_csv("SourceCode\\temp\\out.csv", index=False)
     # str1 = 'mkt_name == "'+comparison
     # str2= '" & mp_year =='+year
     # df.query(str1+str2).to_csv("temp\\out.csv", index=False)

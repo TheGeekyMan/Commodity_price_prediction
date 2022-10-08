@@ -337,7 +337,7 @@ class PredictData:
     
     def prediction(self):
 
-        dataset = pd.read_csv("temp\\out.csv")
+        dataset = pd.read_csv("SourceCode\\temp\\out.csv")
         
         dataFile = self.dataFile
         compare = self.compare
