@@ -1,0 +1,19 @@
+{
+  "name": "commodity_price_prediction",
+  "version": "1.0.0",
+  "description": "stock commodity recommendations",
+  "main": "main.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGeekyMan/Commodity_price_prediction.git"
+  },
+  "author": "Onkar Kulkarni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheGeekyMan/Commodity_price_prediction/issues"
+  },
+  "homepage": "https://github.com/TheGeekyMan/Commodity_price_prediction#readme"
+}
